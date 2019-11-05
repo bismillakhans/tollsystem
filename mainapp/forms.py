@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
-from mainapp.models import Profile
+from mainapp.models import  Profile,Vehicle,Bank
 
 
 class SignUpForm(UserCreationForm):
@@ -21,3 +21,13 @@ class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields =('gender','bio','location','birth_date')
+
+class VehicleForm(forms.ModelForm):
+    class Meta:
+        model = Vehicle
+        fields = ('manufacturer','model_Name','model_Variant','engine','year','car_number')
+
+class BankForm(forms.ModelForm):
+    class Meta:
+        model = Bank
+        fields = ('account_name','account_number')

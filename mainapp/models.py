@@ -44,45 +44,46 @@ def save_user_profile(sender, instance, **kwargs):
 
 
 
-# class Vehicle(models.Model):
-#     manufacturer = models.CharField(max_length=30)
-#     model_Name = models.CharField(max_length=30)
-#     model_Variant = models.CharField(max_length=30)
-#     engine = models.CharField(max_length=30)
-#     year = models.CharField(max_length=30)
-#     user=models.ForeignKey(User,on_delete=models.CASCADE,related_name='vehicles')
-#
-#
-#
-# class Bank(models.Model):
-#     account_name = models.CharField(max_length=30)
-#     account_number = models.CharField(max_length=30)
-#     balance = models.FloatField()
-#     user=models.ForeignKey(User,on_delete=models.CASCADE,related_name='bank_accounts')
-#
+class Vehicle(models.Model):
+    manufacturer = models.CharField(max_length=30)
+    model_Name = models.CharField(max_length=30)
+    model_Variant = models.CharField(max_length=30)
+    engine = models.CharField(max_length=30)
+    year = models.CharField(max_length=30)
+    car_number = models.CharField(max_length=50,blank=True,null=True)
+    user=models.ForeignKey(User,on_delete=models.CASCADE,related_name='vehicles')
+
+
+
+class Bank(models.Model):
+    account_name = models.CharField(max_length=30)
+    account_number = models.CharField(max_length=30)
+    balance = models.FloatField()
+    user=models.ForeignKey(User,on_delete=models.CASCADE,related_name='bank_accounts')
+
 # class TrollPass(models.Model):
 #     passenger = models.ForeignKey(User, on_delete=models.CASCADE, related_name='troll_pass')
 #     count = models.IntegerField()
 #     date = models.DateTimeField(auto_now_add=True)
 
-class VehiclePass(models.Model):
-    car_number=models.CharField(max_length=30 ,null=True,blank=True)
-    date=models.DateTimeField(auto_now_add=True)
-    image = models.FileField('Upload Resumes', upload_to='uploads/')
+# class VehiclePass(models.Model):
+#     car_number=models.CharField(max_length=30 ,null=True,blank=True)
+#     date=models.DateTimeField(auto_now_add=True)
+#     image = models.FileField('Upload Resumes', upload_to='uploads/')
 
-    def __str__(self):
-        return self.image.name
+#     def __str__(self):
+#         return self.image.name
 
-class VehiclePassForm(forms.ModelForm):
-    class Meta:
-        model = VehiclePass
-        fields = ['resume']
-        widgets = {
-            'resume': ClearableFileInput(attrs={'multiple': True}),
-        }
+# class VehiclePassForm(forms.ModelForm):
+#     class Meta:
+#         model = VehiclePass
+#         fields = ['resume']
+#         widgets = {
+#             'resume': ClearableFileInput(attrs={'multiple': True}),
+#         }
 
 
-# delete the resume files associated with each object or record
-@receiver(post_delete, sender=VehiclePass)
-def submission_delete(sender, instance, **kwargs):
-    instance.resume.delete(False)
+# # delete the resume files associated with each object or record
+# @receiver(post_delete, sender=VehiclePass)
+# def submission_delete(sender, instance, **kwargs):
+#     instance.image.delete(False)

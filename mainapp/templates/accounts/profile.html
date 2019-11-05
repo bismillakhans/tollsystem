@@ -1,11 +1,61 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load widget_tweaks %}
 {%  block content %}
-
 <form method="post">
   {% csrf_token %}
-  {{ user_form.as_p }}
-  {{ profile_form.as_p }}
-  <button type="submit">Save changes</button>
+  
+  {% for hidden in user_form.hidden_fields %}
+              {{hidden}}
+            {% endfor %}
+            {% for field in user_form.visible_fields %}
+              <div class = "form-group">
+                <label for = "{{field.id_for_label}}">{{field.label}}</label>
+                {{field|add_class:'form-control'}}
+                {% for error in field.errors  %}
+                  <span class="help-block">{{error}}</span>
+                {% endfor %}
+              </div>
+            {% endfor %}
+  
+    {% for hidden in profile_form.hidden_fields %}
+              {{hidden}}
+            {% endfor %}
+            {% for field in profile_form.visible_fields %}
+              <div class = "form-group">
+                <label for = "{{field.id_for_label}}">{{field.label}}</label>
+                {{field|add_class:'form-control'}}
+                {% for error in field.errors  %}
+                  <span class="help-block">{{error}}</span>
+                {% endfor %}
+              </div>
+            {% endfor %}
+
+            {% for hidden in vehicle_form.hidden_fields %}
+              {{hidden}}
+            {% endfor %}
+            {% for field in vehicle_form.visible_fields %}
+              <div class = "form-group">
+                <label for = "{{field.id_for_label}}">{{field.label}}</label>
+                {{field|add_class:'form-control'}}
+                {% for error in field.errors  %}
+                  <span class="help-block">{{error}}</span>
+                {% endfor %}
+              </div>
+            {% endfor %}
+
+            {% for hidden in bank_form.hidden_fields %}
+              {{hidden}}
+            {% endfor %}
+            {% for field in bank_form.visible_fields %}
+              <div class = "form-group">
+                <label for = "{{field.id_for_label}}">{{field.label}}</label>
+                {{field|add_class:'form-control'}}
+                {% for error in field.errors  %}
+                  <span class="help-block">{{error}}</span>
+                {% endfor %}
+              </div>
+            {% endfor %}
+
+  <button class="btn btn-primary btn-block" type="submit">Save changes</button>
 </form>
 {% endblock %}

@@ -20,11 +20,7 @@ from django.urls import path, include
 from mainapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/',views.index,name='index'),
-    path('base/',views.base,name='base'),
-    path('profile/<int:pk>/',views.view_profile,name='profile'),
-    path('edit_profile/',views.update_profile,name='edit_profile'),
-    path('signup/',views.signup,name='signup'),
+    path('',include('mainapp.urls')),
     path('accounts/',include('django.contrib.auth.urls')),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
