@@ -1,15 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<form method="post" >
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% block  content %}
+<form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Submit</button>
+     {% for hidden in form.hidden_fields %}
+              {{hidden}}
+            {% endfor %}
+            {% for field in form.visible_fields %}
+              <div class = "form-group">
+                <label for = "{{field.id_for_label}}">{{field.label}}</label>
+                {{field|add_class:'form-control'}}
+                {% for error in field.errors  %}
+                  <span class="help-block">{{error}}</span>
+                {% endfor %}
+              </div>
+            {% endfor %}
+    <button type="submit" class="btn btn-primary btn-block">Login</button>
 </form>
 
-</body>
-</html>
+
+{% endblock  %}
