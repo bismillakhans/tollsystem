@@ -1,8 +1,10 @@
+from django import forms
 from django.db import models
 
 from django.contrib.auth.models import User
-from django.db.models.signals import post_save
+from django.db.models.signals import post_save, post_delete
 from django.dispatch import receiver
+from django.forms import ClearableFileInput
 
 STATUS = (
     ('pending', 'Pending'),
@@ -63,3 +65,24 @@ def save_user_profile(sender, instance, **kwargs):
 #     count = models.IntegerField()
 #     date = models.DateTimeField(auto_now_add=True)
 
+class VehiclePass(models.Model):
+    car_number=models.CharField(max_length=30 ,null=True,blank=True)
+    date=models.DateTimeField(auto_now_add=True)
+    image = models.FileField('Upload Resumes', upload_to='uploads/')
+
+    def __str__(self):
+        return self.image.name
+
+class VehiclePassForm(forms.ModelForm):
+    class Meta:
+        model = VehiclePass
+        fields = ['resume']
+        widgets = {
+            'resume': ClearableFileInput(attrs={'multiple': True}),
+        }
+
+
+# delete the resume files associated with each object or record
+@receiver(post_delete, sender=VehiclePass)
+def submission_delete(sender, instance, **kwargs):
+    instance.resume.delete(False)
