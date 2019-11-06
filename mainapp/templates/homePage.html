@@ -1,8 +1,45 @@
 {% extends "base.html" %}
 {% load static %}
+{% load widget_tweaks %}
           {% block content %}
 
 
-          <h1>hai</h1>
+         {% if form %}
+      <div class="row">
+
+        <div class="col-lg-6 col-md-6">
+          <form method="POST" enctype="multipart/form-data" action="{% url 'homePage' %}" style="margin-top: 2%; margin-bottom: 3%">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" id="import" name="import" class="btn btn-success" style="margin-top: 2%; border-radius: 0">Upload</button>
+          </form>
+        </div>
+      </div>
+      {% elif documents %}
+
+
+          <table class="table table-bordered table-striped ">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th> File</th>
+                <th>Name</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for document in documents %}
+                <tr>
+                  <td>{{forloop.counter}}</td>
+                  <td><a href="{{document.file_upload.url}}" target="_blank"><img src="{{document.file_upload.url}}" width="50" height="50"></a></td>
+                  <td>{{document.car_number}}</td>
+                  <td>{{document.date}}</td>
+
+              {% endfor %}
+            </tbody>
+          </table>
+
+
+      {% endif %}
           {% endblock %}
         

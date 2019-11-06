@@ -1,12 +1,17 @@
+import os
+
+from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from django.db import transaction
+from django.db import transaction, IntegrityError
 from django.shortcuts import render, redirect
 from django.contrib.auth import login
 # Create your views here.
 from mainapp.forms import SignUpForm, ProfileForm, UserForm,VehicleForm,BankForm
 # from mainapp.models import VehiclePass, VehiclePassForm
+from mainapp.models import VehiclePassForm, VehiclePass
+from tollsettings import parser
 
 
 def signup(request):
@@ -28,8 +33,7 @@ def index(request):
     return render(request,'index.html')
 
 
-def homePage(request):
-    return render(request,'homePage.html')
+
 
 
     
@@ -41,15 +45,10 @@ def update_profile(request):
     if request.method == 'POST':
         user_form = UserForm(request.POST, instance=request.user)
         profile_form = ProfileForm(request.POST, instance=request.user.profile)
-        vehicle_form = VehicleForm(request.POST, instance=request.user)
-        bank_form = BankForm(request.POST, instance=request.user)
-        if user_form.is_valid() and profile_form.is_valid() and vehicle_form.is_valid() and bank_form.is_valid():
+
+        if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()
-            vehicle_form.user=request.user
-            vehicle_form.save()
-            bank_form.user=request.user
-            bank_form.save()
             messages.success(request, ('Your profile was successfully updated!'))
             return redirect('index')
         else:
@@ -57,30 +56,45 @@ def update_profile(request):
     else:
         user_form = UserForm(instance=request.user)
         profile_form = ProfileForm(instance=request.user.profile)
-        vehicle_form = VehicleForm(instance=request.user)
-        bank_form = BankForm(instance=request.user)
+
     return render(request, 'accounts/profile.html', {
         'user_form': user_form,
-        'profile_form': profile_form,
-        'vehicle_form':vehicle_form,
-        'bank_form' : bank_form
+        'profile_form': profile_form
+
     })
 
 
-# def vehicle_passing(request)
+def vehicle_passing(request):
 
-#     if request.method == 'POST':
-#             file_form = VehiclePassForm(request.POST, request.FILES)
-#             files = request.FILES.getlist('image')
-#             vehicle_data = []
-#             if file_form.is_valid():
-#                 for file in files:
-#                     try:
-#                         # saving the file
-#                         # user = request.user
+    if request.method == 'POST':
+            file_form = VehiclePassForm(request.POST, request.FILES)
+            files = request.FILES.getlist('file_upload')
 
-#                         # saving the file
-#                         image = VehiclePass( image=file)
-#                         image.save()
+            if file_form.is_valid():
+                for file in files:
+                    try:
+                        # saving the file
+                        # user = request.user
+
+                        # saving the file
+                        file_upload = VehiclePass(file_upload=file)
+                        file_upload.save()
+                        output = parser.PlateParser(os.path.join(settings.MEDIA_ROOT, file_upload.file_upload.name))
+                        data = output.get_extracted_data()
+
+                        file_upload.car_number=data.get('name')
+                        file_upload.save()
+                    except IntegrityError:
+                        messages.warning(request, 'Duplicate resume found:', file.name)
+                        return redirect('homePage')
+                documents = VehiclePass.objects.all()
+                messages.success(request, ' Updated!')
+                context = {
+                    'documents': documents,
+                }
+                return render(request, 'homePage.html', context)
+    else:
+        form = VehiclePassForm()
+    return render(request, 'homePage.html', {'form': form})
 
 

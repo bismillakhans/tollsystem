@@ -67,29 +67,26 @@ def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()
 
 
-# class TrollPass(models.Model):
-#     passenger = models.ForeignKey(User, on_delete=models.CASCADE, related_name='troll_pass')
-#     count = models.IntegerField()
-#     date = models.DateTimeField(auto_now_add=True)
-
-# class VehiclePass(models.Model):
-#     car_number=models.CharField(max_length=30 ,null=True,blank=True)
-#     date=models.DateTimeField(auto_now_add=True)
-#     image = models.FileField('Upload Resumes', upload_to='uploads/')
-
-#     def __str__(self):
-#         return self.image.name
-
-# class VehiclePassForm(forms.ModelForm):
-#     class Meta:
-#         model = VehiclePass
-#         fields = ['resume']
-#         widgets = {
-#             'resume': ClearableFileInput(attrs={'multiple': True}),
-#         }
 
 
-# # delete the resume files associated with each object or record
-# @receiver(post_delete, sender=VehiclePass)
-# def submission_delete(sender, instance, **kwargs):
-#     instance.image.delete(False)
+class VehiclePass(models.Model):
+    car_number=models.CharField(max_length=30 ,null=True,blank=True)
+    date=models.DateTimeField(auto_now_add=True)
+    file_upload = models.FileField('Upload ', upload_to='uploads/')
+
+    def __str__(self):
+        return self.file_upload.name
+
+class VehiclePassForm(forms.ModelForm):
+    class Meta:
+        model = VehiclePass
+        fields = ['file_upload']
+        widgets = {
+            'file_upload': ClearableFileInput(attrs={'multiple': True}),
+        }
+
+
+# delete the file_upload files associated with each object or record
+@receiver(post_delete, sender=VehiclePass)
+def submission_delete(sender, instance, **kwargs):
+    instance.file_upload.delete(False)

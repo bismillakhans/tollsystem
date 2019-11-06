@@ -11,33 +11,23 @@ from tollsettings.detection import DetectPlates
 import pytesseract
 
 #pytesseract.pytesseract.tesseract_cmd = r"C:\\Users\\user\\AppData\\Local\\Tesseract-OCR\\tesseract.exe"
-config = ('-l eng --oem 1 --psm 3')
 
 
 
-# module level variables ##########################################################################
-SCALAR_BLACK = (0.0, 0.0, 0.0)
-SCALAR_WHITE = (255.0, 255.0, 255.0)
-SCALAR_YELLOW = (0.0, 255.0, 255.0)
-SCALAR_GREEN = (0.0, 255.0, 0.0)
-SCALAR_RED = (0.0, 0.0, 255.0)
-
-showSteps = False
 
 ###################################################################################################
-def main():
+def detectPlate(image):
     blnKNNTrainingSuccessful = DetectChars.loadKNNDataAndTrainKNN()         # attempt KNN training
-
+    config = ('-l eng --oem 1 --psm 3')
     if blnKNNTrainingSuccessful == False:                               # if KNN training was not successful
         print("\nerror: KNN traning was not successful\n")  # show error message
         return                                                          # and exit program
     # end if
 
-    imgOriginalScene  = cv2.imread('car8.jpg')               # open image
+    imgOriginalScene  = cv2.imread(image)               # open image
 
     if imgOriginalScene is None:                            # if image was not read successfully
-        print("\nerror: image not read from file \n\n")  # print error message to std out
-        os.system("pause")                                  # pause so user can see error message
+        print("\nerror: image not read from file \n\n")  # print error message to std out                                # pause so user can see error message
         return                                              # and exit program
     # end if
 
@@ -58,21 +48,21 @@ def main():
                 # suppose the plate with the most recognized chars (the first plate in sorted by string length descending order) is the actual plate
         licPlate = listOfPossiblePlates[0]
 
-        cv2.imshow("imgThresh", licPlate.imgPlate)
-        cv2.waitKey(0)
+        # cv2.imshow("imgThresh", licPlate.imgPlate)
+        # cv2.waitKey(0)
         # if len(licPlate.strChars) == 0:                     # if no chars were found in the plate
         #     print("\nno characters were detected\n\n")  # show message
         #     return                                          # and exit program
         # end if
     text = pytesseract.image_to_string(licPlate.imgPlate, config=config)
     out=''.join(e for e in text if e.isalnum())
-    print("license plate read from image =", out.upper())
+    print("license plate read from image =",out)
 
-    return
+    return out
 
 
-if __name__ == '__main__':
-    main()
+
+
 
 
 

@@ -6,7 +6,7 @@ from mainapp import views
 urlpatterns = [    
     
     path('index/',views.index,name='index'),
-    path('',views.homePage,name='homePage'),
+    path('',views.vehicle_passing,name='homePage'),
     
     path('edit_profile/',views.update_profile,name='edit_profile'),
     path('signup/',views.signup,name='signup')
