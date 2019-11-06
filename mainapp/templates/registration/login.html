@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 {% load widget_tweaks %}
 {% block  content %}
-<form method="post">
+    <div class="row">
+        <div class="col-6 col-md-4"></div>
+        <div class="col-6 col-md-4">
+        <h1>LOGIN</h1>
+             <form method="post">
     {% csrf_token %}
      {% for hidden in form.hidden_fields %}
               {{hidden}}
@@ -17,6 +21,11 @@
             {% endfor %}
     <button type="submit" class="btn btn-primary btn-block">Login</button>
 </form>
+
+        </div>
+        <div class="col-6 col-md-4"></div>
+    </div>
+
 
 
 {% endblock  %}

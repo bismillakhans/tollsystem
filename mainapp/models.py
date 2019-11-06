@@ -32,34 +32,40 @@ class Profile(models.Model):
         return  self.user.username
 
 
+
+
+
+
+class Vehicle(models.Model):
+    manufacturer = models.CharField(max_length=30,blank=True)
+    model_Name = models.CharField(max_length=30,blank=True)
+    model_Variant = models.CharField(max_length=30,blank=True)
+    engine = models.CharField(max_length=30,blank=True)
+    year = models.CharField(max_length=30,blank=True)
+    car_number = models.CharField(max_length=50,blank=True,null=True)
+    user=models.ForeignKey(User,on_delete=models.CASCADE,related_name='vehicles')
+
+    def __str__(self):
+        return  self.user.username
+
+
+class Bank(models.Model):
+    account_name = models.CharField(max_length=30,blank=True)
+    account_number = models.CharField(max_length=30,blank=True)
+    balance = models.FloatField(default=0)
+    user=models.ForeignKey(User,on_delete=models.CASCADE,related_name='bank_accounts')
+
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
         Profile.objects.create(user=instance)
 
 
+
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()
 
-
-
-class Vehicle(models.Model):
-    manufacturer = models.CharField(max_length=30)
-    model_Name = models.CharField(max_length=30)
-    model_Variant = models.CharField(max_length=30)
-    engine = models.CharField(max_length=30)
-    year = models.CharField(max_length=30)
-    car_number = models.CharField(max_length=50,blank=True,null=True)
-    user=models.ForeignKey(User,on_delete=models.CASCADE,related_name='vehicles')
-
-
-
-class Bank(models.Model):
-    account_name = models.CharField(max_length=30)
-    account_number = models.CharField(max_length=30)
-    balance = models.FloatField()
-    user=models.ForeignKey(User,on_delete=models.CASCADE,related_name='bank_accounts')
 
 # class TrollPass(models.Model):
 #     passenger = models.ForeignKey(User, on_delete=models.CASCADE, related_name='troll_pass')
