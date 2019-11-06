@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% load static %}
+{% block content %}
+    
+       
+            
+{% for vehicle in vehicles%}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                model:  {{vehicle.model_Name}} and  car_no:   {{vehicle.car_number}} is added          
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+    </div>
+      
+{% endfor %}
+       
+      
+<form method="post">
+                    {% csrf_token %}
+                    {% for hidden in form.hidden_fields %}
+                            {{hidden}}
+                            {% endfor %}
+                            {% for field in vehicle_form.visible_fields %}
+                            <div class = "form-group">
+                                <label for = "{{field.id_for_label}}">{{field.label}}</label>
+                                {{field|add_class:'form-control'}}
+                                {% for error in field.errors  %}
+                                <span class="help-block">{{error}}</span>
+                                {% endfor %}
+                            </div>
+                            {% endfor %}
+                    <button type="submit" class="btn btn-primary btn-block">Add Vehicles</button>
+</form>
+
+{% endblock  %}

@@ -1,61 +1,31 @@
 {% extends 'base.html' %}
 {% load widget_tweaks %}
 {%  block content %}
+ 
 <form method="post">
   {% csrf_token %}
   
-  {% for hidden in user_form.hidden_fields %}
-              {{hidden}}
-            {% endfor %}
-            {% for field in user_form.visible_fields %}
-              <div class = "form-group">
-                <label for = "{{field.id_for_label}}">{{field.label}}</label>
-                {{field|add_class:'form-control'}}
-                {% for error in field.errors  %}
-                  <span class="help-block">{{error}}</span>
-                {% endfor %}
-              </div>
-            {% endfor %}
   
-    {% for hidden in profile_form.hidden_fields %}
-              {{hidden}}
-            {% endfor %}
-            {% for field in profile_form.visible_fields %}
-              <div class = "form-group">
-                <label for = "{{field.id_for_label}}">{{field.label}}</label>
-                {{field|add_class:'form-control'}}
-                {% for error in field.errors  %}
-                  <span class="help-block">{{error}}</span>
-                {% endfor %}
-              </div>
-            {% endfor %}
-
-            {% for hidden in vehicle_form.hidden_fields %}
-              {{hidden}}
-            {% endfor %}
-            {% for field in vehicle_form.visible_fields %}
-              <div class = "form-group">
-                <label for = "{{field.id_for_label}}">{{field.label}}</label>
-                {{field|add_class:'form-control'}}
-                {% for error in field.errors  %}
-                  <span class="help-block">{{error}}</span>
-                {% endfor %}
-              </div>
-            {% endfor %}
-
-            {% for hidden in bank_form.hidden_fields %}
-              {{hidden}}
-            {% endfor %}
-            {% for field in bank_form.visible_fields %}
-              <div class = "form-group">
-                <label for = "{{field.id_for_label}}">{{field.label}}</label>
-                {{field|add_class:'form-control'}}
-                {% for error in field.errors  %}
-                  <span class="help-block">{{error}}</span>
-                {% endfor %}
-              </div>
-            {% endfor %}
-
+ 
+  
+  <div class="row">
+  <div class="col-sm">{{user_form.first_name.label}}{{user_form.first_name|add_class:'form-control'}}</div>
+  <div class="col-sm">{{user_form.last_name.label}}{{user_form.last_name|add_class:'form-control'}}</div>
+  </div>
+  <br/>
+  <div class="row">
+    <div class="col-sm-8"> {{user_form.email.label}}{{user_form.email|add_class:'form-control'}}</div>
+    <div class="col-sm-4">{{profile_form.gender.label}}{{profile_form.gender|add_class:'form-control'}}</div>
+  </div>
+       <br/>   
+  <div class="row">
+    <div class="col-sm"> {{profile_form.bio.label}}{{profile_form.bio|add_class:'form-control'}}</div>
+  </div>
+  <br/>
+  <div class="row">
+    <div class="col-sm"> {{profile_form.location.label}}{{profile_form.location|add_class:'form-control'}}</div>
+  </div>
+  <br/>
   <button class="btn btn-primary btn-block" type="submit">Save changes</button>
 </form>
 {% endblock %}

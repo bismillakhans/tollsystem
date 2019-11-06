@@ -2,21 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="663c9cb1-0fe6-4b58-b6ce-e1fa5a7b43de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tollsettings/parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mainapp/migrations/0002_bank_vehicle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mainapp/templates/accounts/bank_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mainapp/templates/accounts/vehicle_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/templates/accounts/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/accounts/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/homePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/homePage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tollsettings/detection/DetectChars.py" beforeDir="false" afterPath="$PROJECT_DIR$/tollsettings/detection/DetectChars.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tollsettings/detection/DetectPlates.py" beforeDir="false" afterPath="$PROJECT_DIR$/tollsettings/detection/DetectPlates.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tollsettings/detection/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/tollsettings/detection/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tollsettings/detection/classifications.txt" beforeDir="false" afterPath="$PROJECT_DIR$/classifications.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tollsettings/detection/flattened_images.txt" beforeDir="false" afterPath="$PROJECT_DIR$/flattened_images.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tollsettings/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tollsettings/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,10 +22,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainapp/templates/homePage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="90">
               <caret line="33" column="138" selection-start-line="33" selection-start-column="138" selection-end-line="33" selection-end-column="138" />
             </state>
           </provider>
@@ -90,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/mainapp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="48" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="48" />
+              <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -110,13 +103,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mainapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="94" column="44" selection-start-line="94" selection-start-column="44" selection-end-line="94" selection-end-column="44" />
+            <state relative-caret-position="75">
+              <caret line="46" column="60" lean-forward="true" selection-start-line="46" selection-start-column="60" selection-end-line="46" selection-end-column="60" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#0#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -191,7 +184,6 @@
         <option value="$PROJECT_DIR$/tollsettings/urls.py" />
         <option value="$PROJECT_DIR$/mainapp/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/mainapp/templates/index.html" />
-        <option value="$PROJECT_DIR$/mainapp/urls.py" />
         <option value="$PROJECT_DIR$/mainapp/admin.py" />
         <option value="$PROJECT_DIR$/mainapp/templates/base.html" />
         <option value="$PROJECT_DIR$/mainapp/models.py" />
@@ -200,8 +192,9 @@
         <option value="$PROJECT_DIR$/tollsettings/settings.py" />
         <option value="$PROJECT_DIR$/tollsettings/detection/DetectChars.py" />
         <option value="$PROJECT_DIR$/tollsettings/parser.py" />
-        <option value="$PROJECT_DIR$/mainapp/views.py" />
         <option value="$PROJECT_DIR$/mainapp/templates/homePage.html" />
+        <option value="$PROJECT_DIR$/mainapp/urls.py" />
+        <option value="$PROJECT_DIR$/mainapp/views.py" />
       </list>
     </option>
   </component>
@@ -352,12 +345,12 @@
       <workItem from="1572885757724" duration="13259000" />
       <workItem from="1572926575022" duration="830000" />
       <workItem from="1573015194984" duration="16970000" />
-      <workItem from="1573055268524" duration="7322000" />
+      <workItem from="1573055268524" duration="8242000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68516000" />
+    <option name="totallyTimeSpent" value="69436000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -370,7 +363,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27613726" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -383,10 +375,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3293718" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3293718" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.3293718" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.33106962" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.33106962" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3293718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -644,16 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainapp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="48" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tollsettings/parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -674,20 +656,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainapp/views.py">
+    <entry file="file://$PROJECT_DIR$/mainapp/templates/homePage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="94" column="44" selection-start-line="94" selection-start-column="44" selection-end-line="94" selection-end-column="44" />
+        <state relative-caret-position="90">
+          <caret line="33" column="138" selection-start-line="33" selection-start-column="138" selection-end-line="33" selection-end-column="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainapp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainapp/templates/homePage.html">
+    <entry file="file://$PROJECT_DIR$/mainapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="33" column="138" selection-start-line="33" selection-start-column="138" selection-end-line="33" selection-end-column="138" />
+        <state relative-caret-position="75">
+          <caret line="46" column="60" lean-forward="true" selection-start-line="46" selection-start-column="60" selection-end-line="46" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
