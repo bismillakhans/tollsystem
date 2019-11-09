@@ -47,9 +47,10 @@ def detectPlate(image):
 
                 # suppose the plate with the most recognized chars (the first plate in sorted by string length descending order) is the actual plate
         licPlate = listOfPossiblePlates[0]
-
-        # cv2.imshow("imgThresh", licPlate.imgPlate)
-        # cv2.waitKey(0)
+        for i in listOfPossiblePlates:
+            cv2.imshow("imgThresh", i.imgPlate)
+            cv2.waitKey(0)
+            cv2.destroyAllWindows()
         # if len(licPlate.strChars) == 0:                     # if no chars were found in the plate
         #     print("\nno characters were detected\n\n")  # show message
         #     return                                          # and exit program

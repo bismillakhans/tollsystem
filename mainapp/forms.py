@@ -31,3 +31,6 @@ class BankForm(forms.ModelForm):
     class Meta:
         model = Bank
         fields = ('account_name','account_number')
+
+class VehicleNumberForm(forms.Form):
+    car_number= forms.CharField(label='Car Number', max_length=12)

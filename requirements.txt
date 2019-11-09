@@ -8,5 +8,4 @@ pytesseract==0.3.0
 pytz==2019.3
 sqlparse==0.3.0
 whitenoise==4.1.4
-django-heroku
 gunicorn

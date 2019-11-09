@@ -7,7 +7,7 @@
             
 {% for bank in banks%}
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                bank:  {{bank.account_name}} and  acc.no:   {{bank.account_number}} is added          
+                Bank:  {{bank.account_name}} and  acc.no:   {{bank.account_number}} Having  Balance:<b>{{ bank.balance }}</b>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>

@@ -53,6 +53,7 @@ class Bank(models.Model):
     account_name = models.CharField(max_length=30,blank=True)
     account_number = models.CharField(max_length=30,blank=True)
     balance = models.FloatField(default=0)
+    primary=models.BooleanField(default=False)
     user=models.ForeignKey(User,on_delete=models.CASCADE,related_name='bank_accounts')
 
 @receiver(post_save, sender=User)

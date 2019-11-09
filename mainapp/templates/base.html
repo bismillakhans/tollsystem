@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>{% block title %}Django Boards{% endblock %}</title>
+    <title>{% block title %}Toll System...{% endblock %}</title>
     <link href="https://fonts.googleapis.com/css?family=Peralta" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/app.css' %}">
@@ -20,9 +20,11 @@
             <div class="collapse navbar-collapse" id="mainMenu">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'homePage' %}">Boards</a>
+                  <a class="nav-link" href="{% url 'homePage' %}">Home</a>
                 </li>
-
+<li class="nav-item">
+                  <a class="nav-link" href="{% url 'vehicle' %}">Enter Manually</a>
+                </li>
               </ul>
               {% if user.is_authenticated %}
                 <ul class="navbar-nav ml-auto">
@@ -58,6 +60,7 @@
             {% block breadcrumb %}
             {% endblock %}
           </ol>
+          {% include 'messages.html' %}
           {% block content %}
           {% endblock %}
         </div>

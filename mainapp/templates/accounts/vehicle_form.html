@@ -7,7 +7,7 @@
             
 {% for vehicle in vehicles%}
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                model:  {{vehicle.model_Name}} and  car_no:   {{vehicle.car_number}} is added          
+                model:  {{vehicle.model_Name}} and  car_no: <b>{{ vehicle.car_number|upper }}</b> is added
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>

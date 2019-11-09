@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+{% load widget_tweaks %}
+{% block content %}
+
+
+    <div class="row">
+
+        <div class="col-lg-6 col-md-6">
+            <form method="POST" style="margin-top: 2%; margin-bottom: 3%">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" id="import" name="import" class="btn btn-success"
+                        style="margin-top: 2%; border-radius: 0">Enter
+                </button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
