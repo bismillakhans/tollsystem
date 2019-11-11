@@ -5,12 +5,13 @@ __pycache__/
 
 # C extensions
 *.so
-
+lapi.weights
 # Distribution / packaging
 .Python
 env/
 build/
 develop-eggs/
+media/
 dist/
 downloads/
 eggs/

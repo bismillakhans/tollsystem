@@ -20,6 +20,7 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
+            messages.success(request, ' Account Create Successfully!')
             return redirect('index')
     else:
         form = SignUpForm()
@@ -60,7 +61,7 @@ def update_profile(request):
 
     })
 
-
+@login_required
 def addVehicle(request):
     if request.method == 'POST':
         vehicle_form = VehicleForm(request.POST)
@@ -76,12 +77,12 @@ def addVehicle(request):
     else:
         vehicle_form = VehicleForm()
     vehicle = Vehicle.objects.filter(user=request.user)
-    return render(request, 'accounts/vehicle.html', {
+    return render(request, 'accounts/vehicle_form.html', {
         'vehicle_form': vehicle_form,
         'vehicles': vehicle
     })
 
-
+@login_required
 def addBank(request):
     if request.method == 'POST':
         bank_form = BankForm(request.POST)
@@ -116,8 +117,9 @@ def vehicle_passing(request):
                     file_upload.save()
                     output = parser.PlateParser(os.path.join(settings.MEDIA_ROOT, file_upload.file_upload.name))
                     data = output.get_extracted_data()
+                    data_=data.get('name')
 
-                    file_upload.car_number = data.get('name')
+                    file_upload.car_number =data_.upper()
                     file_upload.save()
                 except IntegrityError:
                     messages.warning(request, 'Duplicate resume found:', file.name)
@@ -143,13 +145,17 @@ def vehicle_manually(request):
             try:
                 vehicle_found = Vehicle.objects.get(car_number=car_number.lower())
                 bank = Bank.objects.get(user=vehicle_found.user)
-                if bank.balance > 6:
-                    bank.balance = bank.balance - 5
-                    bank.save()
-                    messages.success(request, ' Operation Success')
+                if bank:
+                    if bank.balance > 6:
+                        bank.balance = bank.balance - 5
+                        bank.save()
+                        messages.success(request, ' Operation Success')
 
+                    else:
+                        messages.error(request, ' In Suffiecient Balance!')
                 else:
-                    messages.error(request, ' In Suffiecient Balance!')
+                    messages.error(request, ' No Bank account linked on this account!')
+
 
             except:
                 messages.error(request, ' No Vehicle Found!')

@@ -15,4 +15,4 @@ class BankAdmin(admin.ModelAdmin):
 
 @admin.register(VehiclePass)
 class VehiclePassAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('id','car_number')
