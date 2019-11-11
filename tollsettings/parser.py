@@ -1,6 +1,6 @@
 from django.conf import settings
 
-from tollsettings.detection import Main
+from tollsettings.detection2 import detecor
 
 class PlateParser(object):
     def __init__(self, file_upload):
@@ -11,7 +11,7 @@ class PlateParser(object):
             'name'              : None
         }
         self.__file_upload = file_upload
-        self.__final =Main.detectPlate(file_upload)
+        self.__final =detecor.detectPlate(file_upload)
         print(self.__final)
 
 

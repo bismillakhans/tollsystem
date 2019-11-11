@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="663c9cb1-0fe6-4b58-b6ce-e1fa5a7b43de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tollsettings/detection2/classes.names" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tollsettings/detection2/darknet-yolov3.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tollsettings/detection2/detecor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/homePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/homePage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/uploads/Luxury-Car-Rental-Thrissur-Kerala-1-900x577.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/uploads/Luxury-Car-Rental-Thrissur-Kerala-1-900x577_7C8fGhB.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/uploads/WhatsApp-Image-2019-03-01-at-11.30.34-AM-768x1024.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/uploads/WhatsApp-Image-2019-03-01-at-11.30.34-AM-768x1024_UEBozFH.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/uploads/images.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/uploads/wedding-car-hire-rental-service-in-shoranur-500x500.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tollsettings/detection/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/tollsettings/detection/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tollsettings/detection2/classes.names" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tollsettings/detection2/darknet-yolov3.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tollsettings/detection2/detecor.py" beforeDir="false" afterPath="$PROJECT_DIR$/tollsettings/detection2/detecor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tollsettings/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/tollsettings/parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tollsettings/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/tollsettings/settings/base.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,22 +24,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mainapp/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1215">
-              <caret line="87" selection-start-line="87" selection-end-line="87" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tollsettings/detection/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
+            <state relative-caret-position="176">
+              <caret line="58" column="4" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="47" />
               <folding>
                 <element signature="e#11#21#0" expanded="true" />
               </folding>
@@ -58,21 +36,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tollsettings/detection/DetectPlates.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="62" column="4" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
-              <folding>
-                <element signature="e#19#29#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2160">
+            <state relative-caret-position="376">
               <caret line="157" selection-start-line="157" selection-end-line="157" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -90,11 +56,65 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tollsettings/detection2/detecor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="116" column="14" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="14" />
+              <folding>
+                <element signature="e#333#349#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tollsettings/settings/dev.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tollsettings/settings/base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="126" column="7" selection-start-line="126" selection-end-line="126" selection-end-column="7" />
+              <folding>
+                <element signature="e#313#322#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tollsettings/parser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -133,6 +153,7 @@
       <find>settings</find>
       <find>cv2</find>
       <find>outputFile</find>
+      <find>inpWidth</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/mainapp</dir>
@@ -163,8 +184,6 @@
         <option value="$PROJECT_DIR$/tollsettings/settings1/base.py" />
         <option value="$PROJECT_DIR$/tollsettings/settings1/prod.py" />
         <option value="$PROJECT_DIR$/manage.py" />
-        <option value="$PROJECT_DIR$/tollsettings/settings/base.py" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/mainapp/models.py" />
         <option value="$PROJECT_DIR$/mainapp/templates/accounts/bank_form.html" />
         <option value="$PROJECT_DIR$/mainapp/templates/accounts/vehicle_form.html" />
@@ -175,12 +194,15 @@
         <option value="$PROJECT_DIR$/mainapp/forms.py" />
         <option value="$PROJECT_DIR$/mainapp/templates/vehicle.html" />
         <option value="$PROJECT_DIR$/tollsettings/detection/Main.py" />
-        <option value="$PROJECT_DIR$/tollsettings/parser.py" />
         <option value="$PROJECT_DIR$/mainapp/admin.py" />
         <option value="$USER_HOME$/Desktop/ANPR/Licence_plate_detection/detecor.py" />
         <option value="$PROJECT_DIR$/mainapp/views.py" />
         <option value="$PROJECT_DIR$/mainapp/templates/homePage.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/tollsettings/parser.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/tollsettings/settings/base.py" />
+        <option value="$PROJECT_DIR$/tollsettings/detection2/detecor.py" />
       </list>
     </option>
   </component>
@@ -242,7 +264,19 @@
               <item name="tollsystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="tollsystem" type="462c0819:PsiDirectoryNode" />
               <item name="tollsettings" type="462c0819:PsiDirectoryNode" />
+              <item name="detection" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tollsystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tollsystem" type="462c0819:PsiDirectoryNode" />
+              <item name="tollsettings" type="462c0819:PsiDirectoryNode" />
               <item name="detection2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tollsystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tollsystem" type="462c0819:PsiDirectoryNode" />
+              <item name="tollsettings" type="462c0819:PsiDirectoryNode" />
+              <item name="settings" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -409,12 +443,12 @@
       <workItem from="1573305192583" duration="6696000" />
       <workItem from="1573350217744" duration="2480000" />
       <workItem from="1573399940646" duration="2469000" />
-      <workItem from="1573403351182" duration="540000" />
+      <workItem from="1573403351182" duration="3060000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98943000" />
+    <option name="totallyTimeSpent" value="101463000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -429,7 +463,7 @@
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49746192" visible="true" weight="0.125" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49746192" visible="true" weight="0.125" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5025381" side_tool="true" weight="0.27613726" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -443,7 +477,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3293718" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.41652894" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.41652894" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3289256" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -484,7 +518,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mainapp/templates/registration/numberplate.py" />
     <entry file="file://$PROJECT_DIR$/tollsettings/wsgi.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -617,34 +650,10 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tollsettings/settings.py" />
-    <entry file="file://$PROJECT_DIR$/tollsettings/settings/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
-          <folding>
-            <element signature="e#313#322#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tollsettings/settings/dev.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tollsettings/settings/prod.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="22" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -759,16 +768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tollsettings/parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/ANPR/Licence_plate_detection/detecor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
@@ -789,32 +788,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tollsettings/detection/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
-          <folding>
-            <element signature="e#11#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tollsettings/detection/DetectPlates.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="780">
           <caret line="62" column="4" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
           <folding>
             <element signature="e#19#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainapp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
-          <caret line="157" selection-start-line="157" selection-end-line="157" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -836,7 +815,71 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tollsettings/parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tollsettings/settings/dev.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tollsettings/settings/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="126" column="7" selection-start-line="126" selection-end-line="126" selection-end-column="7" />
+          <folding>
+            <element signature="e#313#322#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tollsettings/detection/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="58" column="4" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="47" />
+          <folding>
+            <element signature="e#11#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="157" selection-start-line="157" selection-end-line="157" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tollsettings/detection2/detecor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="116" column="14" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="14" />
+          <folding>
+            <element signature="e#333#349#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

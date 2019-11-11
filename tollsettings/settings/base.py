@@ -119,6 +119,10 @@ LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = '/'
 
 
+#
+# CLASS_URL = os.path.join(BASE_DIR, 'classifications.txt')
+# FLAT_URL = os.path.join(BASE_DIR, 'flattened_images.txt')
 
-CLASS_URL = os.path.join(BASE_DIR, 'classifications.txt')
-FLAT_URL = os.path.join(BASE_DIR, 'flattened_images.txt')
+CLASS_NAME = os.path.join(BASE_DIR, 'classes.names')
+WEIGHTS = os.path.join(BASE_DIR, 'lapi.weights')
+DARK_NET = os.path.join(BASE_DIR, 'darknet-yolov3.cfg')
