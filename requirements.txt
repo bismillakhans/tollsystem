@@ -10,7 +10,7 @@ sqlparse==0.3.0
 whitenoise==4.1.4
 gunicorn
 cycler==0.10.0
-joblib==0.14.0
+joblib==1.2.0
 kiwisolver==1.1.0
 matplotlib==3.0.3
 opencv-python==4.1.1.26
